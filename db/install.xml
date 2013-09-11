@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<XMLDB PATH="mod/url/db" VERSION="20120122" COMMENT="XMLDB file for playlist module" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../lib/xmldb/xmldb.xsd">
+  <TABLES>
+    <TABLE NAME="playlist" COMMENT="">
+      <FIELDS>
+        <FIELD NAME="id"     TYPE="int"  LENGTH="10" NOTNULL="true"             SEQUENCE="true"  NEXT="course"/>
+        <FIELD NAME="course" TYPE="int"  LENGTH="10" NOTNULL="true"             SEQUENCE="false" NEXT="name" PREVIOUS="id"/>
+        <FIELD NAME="name"   TYPE="char" LENGTH="50" NOTNULL="true"             SEQUENCE="false" NEXT="list" PREVIOUS="course"/>
+        <FIELD NAME="list"   TYPE="text"             NOTNULL="true"             SEQUENCE="false"             PREVIOUS="name"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+      </KEYS>
+      <INDEXES>
+        <INDEX NAME="coursename" UNIQUE="true" FIELDS="course,name"/>
+      </INDEXES>
+    </TABLE>
+  </TABLES>
+</XMLDB>
