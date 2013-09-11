@@ -33,5 +33,7 @@
 
     $module->version   = 2013052000;
     $module->requires  = 2012062500;
-    $module->component = 'mod_playlist';
     $module->cron      = 0;
+    $module->component = 'mod_playlist';
+    $module->maturity  = MATURITY_RC;
+    $module->release   = '0.0.1 (Build 2013091000)';
