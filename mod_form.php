@@ -117,7 +117,7 @@
             foreach ($list as $item) {
                 if (empty($item)) continue;
 
-                @list($url, $name) = array_map('trim', explode(',', $item));
+                @list($url, $name) = array_map('trim', explode(',', $item, 2));
                 if (empty($url)) continue;
 
                 if (!preg_match('/^rtmp:\/\//', $url)) {

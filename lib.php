@@ -158,12 +158,12 @@
         foreach ($list as $item) {
             if (empty($item)) continue;
 
-            @list($url, $name) = array_map('trim', explode(',', $item));
+            @list($url, $name) = array_map('trim', explode(',', $item, 2));
 
             if (empty($url)) continue;
 
             $url   = str_replace(' ', '+', $url);
-            $name  = clean_param(trim($name), PARAM_ALPHAEXT);
+            $name  = clean_param(trim($name), PARAM_TEXT);
             $buf[] = $url . (empty($name) ? '' : ",$name");
 
         } // foreach
