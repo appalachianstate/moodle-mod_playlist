@@ -68,6 +68,7 @@
 
     echo $OUTPUT->header();
     echo $OUTPUT->heading(format_string($playlist->name), 2, 'main', 'pageheading');
+    echo $OUTPUT->box(get_string('example_usage', 'mod_playlist') . "<br /><br />&lt;a href=\"rtmp://playlist={$playlist->name}\"&gt;{$playlist->name}&lt;/a&gt;", "generalbox center clearfix");
 
     $formatoptions              = new stdClass;
     $formatoptions->noclean     = true;

@@ -32,19 +32,20 @@
 
 
 
-    $string['pluginname'] = 'Playlist';
-    $string['pluginadministration'] = 'Playlist administration';
+    $string['pluginname']               = 'Playlist';
+    $string['pluginadministration']     = 'Playlist administration';
 
-    $string['modulename'] = 'Playlist';
-    $string['modulenameplural'] = 'Playlists';
-    $string['modulename_link'] = 'mod/playlist/view';
-    $string['modulename_help'] = 'RTMP Playlists are used by the RTMP filter to configure a media player with a list of media streams to play. Each line should contain the rtmp:// URL for the video or audio stream, with an optional name for the stream separated by a comma.';
+    $string['modulename']               = 'Playlist';
+    $string['modulenameplural']         = 'Playlists';
+    $string['modulename_link']          = 'mod/playlist/view';
+    $string['modulename_help']          = 'RTMP Playlists are used by the RTMP filter to configure a media player with a list of media streams to play. Each line should contain the rtmp:// URL for the video or audio stream, with an optional name for the stream separated by a comma.';
 
-    $string['playlist:addinstance'] = 'Add a new playlist';
-    $string['page-mod-playlist-x']  = 'Any playlist module page';
+    $string['playlist:addinstance']     = 'Add a new playlist';
+    $string['page-mod-playlist-x']      = 'Any playlist module page';
 
-    $string['list']         = 'List';
-    $string['list_help']    = 'List of RTMP URLs, one per line, with an optional name, seperated by a comma, to display in the list for that URL.';
+    $string['list']                     = 'List';
+    $string['list_help']                = 'List of RTMP URLs, one per line, with an optional name, seperated by a comma, to display in the list for that URL.';
 
-    $string['err_list_url_invalid']    = 'One or more of the URLs in the list is invalid.';
-    $string['err_list_name_is_taken']  = 'Playlist name is already used.';
+    $string['err_list_url_invalid']     = 'One or more of the URLs in the list is invalid.';
+    $string['err_list_name_is_taken']   = 'Playlist name is already used.';
+    $string['example_usage']            = 'Copy/paste the following link in an HTML editor:';
