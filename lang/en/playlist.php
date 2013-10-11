@@ -41,6 +41,7 @@
     $string['modulename_help']          = 'RTMP Playlists are used by the RTMP filter to configure a media player with a list of media streams to play. Each line should contain the rtmp:// URL for the video or audio stream, with an optional name for the stream separated by a comma.';
 
     $string['playlist:addinstance']     = 'Add a new playlist';
+    $string['playlist:view']            = 'View playlist';
     $string['page-mod-playlist-x']      = 'Any playlist module page';
 
     $string['list']                     = 'List';
