@@ -37,9 +37,10 @@
     // Authenticate and authorize
     require_login($id, true);
 
-
-    add_to_log($COURSE->id, 'playlist', 'view all', "index.php?id={$COURSE->id}", '');
-
+    $event = \mod_playlist\event\course_module_instance_list_viewed::create(array(
+        'context' => $PAGE->context
+    ));
+    $event->trigger();
 
     $lbl_playlists = get_string('modulenameplural', 'mod_playlist');
     $lbl_name      = get_string('name');

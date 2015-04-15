@@ -32,10 +32,10 @@
 
 
 
-    // Course module id is supplied
+    // Course module id is supplied.
     $id = optional_param('id',0,PARAM_INT);
 
-    // Set this up in case print_error() is needed
+    // Set this up in case print_error() is needed.
     $PAGE->set_url('/mod/playlist/view.php', array('id' => $id));
 
     $cm = get_coursemodule_from_id('playlist', $id);
@@ -43,10 +43,10 @@
         throw new moodle_exception('invalidcoursemodule', 'error');
     }
 
-    // Authenticate & authorize
+    // Authenticate & authorize.
     require_login($cm->course, true, $cm);
 
-    // Fetch the playlist instance
+    // Fetch the playlist instance.
     $playlist = $DB->get_record('playlist', array('id' => $cm->instance));
     if (!$playlist) {
         throw new moodle_exception('coursemisconf', 'error');
@@ -55,9 +55,12 @@
     $context = context_module::instance($cm->id);
     require_capability('mod/playlist:view', $context);
 
-
-    add_to_log($COURSE->id, 'playlist', 'view', 'view.php?id=' . $cm->id, $playlist->id, $cm->id);
-
+    // Trigger module viewed event.
+    $event = \mod_playlist\event\course_module_viewed::create(array(
+        'objectid' => $playlist->id,
+        'context'  => $context
+    ));
+    $event->trigger();
 
     $PAGE->set_title("{$COURSE->shortname}: {$playlist->name}");
     $PAGE->set_heading($COURSE->fullname);
