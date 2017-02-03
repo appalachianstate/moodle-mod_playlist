@@ -31,9 +31,9 @@
 
     defined('MOODLE_INTERNAL') || die();
 
-    $plugin->version   = 2013052001;
+    $plugin->version   = 2013052002;
     $plugin->requires  = 2012062500;
     $plugin->cron      = 0;
     $plugin->component = 'mod_playlist';
     $plugin->maturity  = MATURITY_STABLE;
-    $plugin->release   = '0.0.3 (Build 2014012300)';
+    $plugin->release   = '0.0.4 (Build 2017020300)';
